@@ -1,25 +1,24 @@
-# Ember-tabbable
+# Ember-tabbable [![Build Status](https://travis-ci.org/4lex-io/ember-tabbable.png?branch=master)](https://travis-ci.org/4lex-io/ember-tabbable)
 
-This README outlines the details of collaborating on this Ember addon.
+This is a simple Ember-CLI addon which provide the uses the ':tabbable' and ':focusable' selectors from jQuery UI Core.
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+```
+ember install ember-tabbable
+```
 
-## Running
+## Usage
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+You will be able to use the selectors `:tabbable` and `:focusable` directly in your project.
 
-## Running Tests
+```
+import Ember from 'ember';
 
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+export default Component.extend({
+    didInsertElement() {
+        const tabbableElements = this.$(':tabbable');
+        const focusableElements = this.$(':focusable');
+    }
+});
+```
