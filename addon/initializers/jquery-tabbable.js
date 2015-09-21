@@ -4,9 +4,11 @@
 
 import Ember from 'ember';
 
-var jqueryTabbable = Ember.Object.create({
+var jqueryTabbable = {
 
-	init() {
+	name: 'jqueryTabbable',
+
+	initialize() {
 		var self = this;
 		if (!Ember.$.expr[':'].focusable) {
 			Ember.$.extend(Ember.$.expr[':'], {
@@ -56,12 +58,6 @@ var jqueryTabbable = Ember.Object.create({
 				return Ember.$.css(this, 'visibility') === 'hidden';
 			}).length;
 	}
-});
-
-export default {
-	name: 'jqueryTabbable',
-
-	initialize() {
-		jqueryTabbable.init();
-	}
 };
+
+export default jqueryTabbable;
