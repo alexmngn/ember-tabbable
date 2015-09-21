@@ -1,6 +1,6 @@
 {
   "name": "ember-tabbable",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Includes ':tabbable' and ':focusable' selectors from jQuery UI Core",
   "directories": {
     "doc": "doc",
